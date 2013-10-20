@@ -3,17 +3,14 @@
 <head>
     <title>DirectMyFile</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="http://yui.yahooapis.com/combo?pure/0.1.0/base-min.css&pure/0.1.0/buttons-min.css&pure/0.1.0/menus-min.css">
 
-    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600">
-    <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/pure-min.css">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" media="screen">
 
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css">
 
     <link href="css/style.css" rel="stylesheet" media="screen" type="text/css">
-
 </head>
 <body id="top">
 <div class="container">
@@ -24,24 +21,15 @@
     </div>
     <div class="page-header">
         <div class="pure-menu pure-menu-open pure-menu-horizontal hidden-phone">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="projects/">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About Us</a></li>
+            <ul id="navigate">
+                <li><a href="#top">Home</a></li>
+                <li><a href="#tools">Tools</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="http://jam.directmyfile.com/">CodeJam</a></li>
             </ul>
         </div>
         <br class="visible-desktop" />
-        <div class="pure-menu pure-menu-open pure-menu-nav visible-phone">
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="tools.html">Tools</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="about.html">About Us</a></li>
-            </ul>
-        </div>
     </div>
 
     <div class="info-block">
@@ -58,7 +46,7 @@
         <br />
         <p class="hero-body side-padding">We can provide your DirectMyFile-approved application with the tools necessary to get it created quickly and diligently.</p>
         <br />
-        <a class="pure-button pure-button-primary" style="font-size: 130%; display: block; margin-left: 150px; margin-right: 150px;" href="#">Request Tools</a>
+        <a class="pure-button pure-button-primary" style="font-size: 130%; display: block; margin-left: 150px; margin-right: 150px;" id="requestTools">Request Tools</a>
     </div>
     <hr id="projects" />
 
@@ -67,7 +55,7 @@
         <br />
         <p class="hero-body side-padding">Want to know about all of the projects that DirectMyFile either produces, or endorses as it's own? Click below.</p>
         <br />
-        <a class="pure-button pure-button-primary" style="font-size: 130%; display: block; margin-left: 150px; margin-right: 150px;" href="projects/">View Projects</a>
+        <a class="pure-button pure-button-primary" style="font-size: 130%; display: block; margin-left: 150px; margin-right: 150px;" id="viewProjects">View Projects</a>
     </div>
     <hr id="contact" />
 
@@ -91,7 +79,6 @@
                 <a class="pure-menu-heading">Links</a>
                 <ul class="no-right-radius">
                     <li><a href="#top">DirectMyFile</a></li>
-                    <li><a href="about.html">About Us</a></li>
                     <li><a href="https://bitbucket.org/directmyfile/">Bitbucket</a></li>
                     <li><a href="https://directmyfile.atlassian.net">Issue Tracker and Wiki</a></li>
                 </ul>
@@ -126,16 +113,16 @@
     </form>
 </div>
 
-<script src="http://code.jquery.com/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/webfont/1.4.10/webfont.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
 <script src="js/prefixfree.min.js"></script>
 
 <script src="js/scroll.js"></script>
 
-<script src="js/click.js"></script>
-
-<script src="js/site.js"></script>
+<script src="https://github.com/makeusabrew/bootbox/releases/download/v4.1.0/bootbox.min.js"></script>
+<script>$.getScript("js/site.js");</script>
 
 </body>
 </html>
