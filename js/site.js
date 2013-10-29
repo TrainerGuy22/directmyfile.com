@@ -19,3 +19,11 @@ $('#contactUs').click(function () {
     bootbox.alert("Request Sent");
   });
 });
+
+function getRootDomain() {
+   var temp = location.host.split('.').reverse();
+   var root_domain = '.' + temp[1] + '.' + temp[0];
+   return root_domain;
+}
+
+console.log("Running on domain: " + getRootDomain());
