@@ -10,6 +10,19 @@ function sendN(email) {
   });
 }
 
+function showProjects() {
+   bootbox.dialog({
+     message: "View Projects is not fully supported yet. Stay tuned!",
+     backdrop: true,
+     closeButton: true,
+     buttons: {
+       main: {
+         label: "OK"
+       }
+     }
+   });
+}
+
 $('#contactUs').click(function () {
   bootbox.prompt('Enter your Email', function (email) {
     if(email==null || email=='') {
@@ -20,10 +33,6 @@ $('#contactUs').click(function () {
   });
 });
 
-function getRootDomain() {
-   var temp = location.host.split('.').reverse();
-   var root_domain = '.' + temp[1] + '.' + temp[0];
-   return root_domain;
-}
-
-console.log("Running on domain: " + getRootDomain());
+$("#viewProjects").click(function() {
+  showProjects();
+});
