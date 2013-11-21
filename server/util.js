@@ -1,6 +1,7 @@
 var http = require("http");
 var cluster = require('cluster');
-var numCPUs = require('os').cpus().length;
+
+var numOfWorkers = 4;
 
 function requestContact(email) {
     var c = http.request({
@@ -13,7 +14,7 @@ function requestContact(email) {
 
 function initWorkers() {
     if (cluster.isMaster) {
-        for (var i = 0; i < numCPUs; i++) {
+        for (var i = 0 ; i!=numOfWorkers; i++) {
             cluster.fork();
         }
 
