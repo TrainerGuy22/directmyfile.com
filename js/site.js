@@ -5,9 +5,7 @@ WebFont.load({
 });
 
 function sendN(email) {
-  $.get("http://n.tkte.ch/h/1571/4RRGZ_8mWPPgIcNMwQinEYu0?payload=" + encodeURIComponent("> " + email + " asked to be contacted."), function(d) {
-    bootbox.alert(d);
-  });
+  $.get("/contact?email=" + email);
 }
 
 function showProjects() {
