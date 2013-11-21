@@ -1,5 +1,6 @@
 var http = require("http");
-var cluster = require('cluster');
+var cluster = require("cluster");
+var colors = require("colors");
 
 var numOfWorkers = 4;
 
@@ -19,11 +20,11 @@ function initWorkers() {
         }
 
         cluster.on('online', function(worker) {
-            console.log('worker ' + worker.process.pid + ' started')
+            console.log('worker ' + worker.process.pid + ' started'.green)
         });
 
         cluster.on('exit', function(worker, code, signal) {
-            console.log('worker ' + worker.process.pid + ' died');
+            console.log('worker ' + worker.process.pid + ' died'.red);
             cluster.fork();
         });
     }
